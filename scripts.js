@@ -52,15 +52,3 @@ $('#next').click(() => {
   }
   loadPhoto(currentPhoto);
 })
-
-let counter = 0;
- imagesData.forEach((data) => {
-     $('#thumbnail-container').append(
-        '<div class ="container" id="container-' + counter + '"><img src="' + data.photo + '"data-number="' + counter + '" id="containerPhoto"></div>'
-    );
-    $('.container').click((event) => {
-        let indexClicked = $(event.target).attr('data-number');
-        let numberIndex = parseInt(indexClicked);
-        $('.container').text(data.title[numberIndex]);
-   });
-});
