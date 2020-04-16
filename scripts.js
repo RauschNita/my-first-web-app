@@ -65,6 +65,7 @@ $('#next').click(() => {
   loadPhoto(currentPhoto);
 })
 
+data.forEach((item, index) => {
   $('#container').append(`<div class="box" data-index="${index}">${item} (data-index="${index}")</div>`);
   $('.box').click((event) => {
     let indexClicked = $(event.target).attr('data-index');
