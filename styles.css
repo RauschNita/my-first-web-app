@@ -1,7 +1,7 @@
 
   #container {
     display: flex; 
-    
+    margin-top: 20px;
   }
   .arrow {
     text-align: center;
