@@ -2,12 +2,13 @@
   #container {
     display: flex; 
     margin-top: 20px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   }
   .arrow {
     text-align: center;
     line-height: 400px;
     padding: 20px;
-    background-color: slategray;
+    background-color: silver;
   }
   .right-arrow {
       transform: scaleX(-1);
@@ -26,7 +27,7 @@
     position: relative;
     max-width: 50%; 
     margin: 0 auto; 
-    background: silver;
+    background: skyblue;
   }
   
   .gray-container {
