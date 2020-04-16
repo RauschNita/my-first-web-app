@@ -54,8 +54,8 @@ loadPhoto(currentPhoto);
 $('#previous').click(() => {
   if (currentPhoto < imagesData.length+1) {
     currentPhoto--;
-  }
-  loadPhoto(currentPhoto);
+  } 
+  loadPhoto(currentPhoto);  
 });
 
 $('#next').click(() => {
@@ -64,3 +64,15 @@ $('#next').click(() => {
   }
   loadPhoto(currentPhoto);
 })
+
+  $('#container').append(`<div class="box" data-index="${index}">${item} (data-index="${index}")</div>`);
+  $('.box').click((event) => {
+    let indexClicked = $(event.target).attr('data-index');
+    // indexClicked is now a string! if you need it as a number you have to change it
+    // because for example "1" + 1 is going to be "11" and not 2
+    let numberIndex = parseInt(indexClicked);
+    // now numberIndex is a number
+    $('#clicked').text(data[indexClicked]);
+  });
+});
+
