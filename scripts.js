@@ -65,5 +65,19 @@ $('#next').click(() => {
   loadPhoto(currentPhoto);
 })
 
+let allPhoto = (allMiniPhoto) => {
+  $('#mini-photo').attr('src', imagesData[allMiniPhoto].photo);
+}
+allPhoto(currentPhoto);
 
+let data = ["first", "second", "third"];
+
+data.forEach((item, index) => {
+  $('#thumbnails').attr('src', imagesData[allMiniPhoto].photo);
+  $('.box').click((event) => {
+    let indexClicked = $(event.target).attr('data-index');
+    let numberIndex = parseInt(indexClicked);
+    $('#clicked').text(data[indexClicked]);
+  });
+});
 
